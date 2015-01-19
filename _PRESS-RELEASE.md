@@ -17,28 +17,27 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > sellMyOldStuff.
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-
+  > Easier way to post to multiple places to sell your junk
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Need to seel stuff on multiple channels
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > multi-depoly selling stuff
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  >We will help you sell your junk!
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  >Use the website, or app, signin and take pictures of your stuff
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > Awesome sauce, where have you been all my life?
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > read my future blog!
