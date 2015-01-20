@@ -1,5 +1,16 @@
-/* CSS declarations go here */
-.mapSize{
-    height: 500px;
-    width: 400px;
+*{
+    font-family: Arial;
+}
+.mapSize {
+    float: left;
+    height: 600px;
+    margin: 0 1.5%;
+    width: 63%;
+}
+
+.right{
+    float: right;
+    margin: 0 1.5%;
+    width: 30%;
+
 }
