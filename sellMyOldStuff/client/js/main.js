@@ -1,6 +1,6 @@
 
 
-
+Meteor.startup(Geolocation.latLng());
 
 
   //// counter starts at 0

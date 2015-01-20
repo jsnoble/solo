@@ -31,8 +31,8 @@ Template.productPage.events({
       var descriptionz = $('#description').val();
       var pricez = $('#number').val();
       var imagez = Session.get('photo');
-      var locz = Geolocation.currentLocation();
-     // console.log ('this is loc: ' + locz , itemz , descriptionz , pricez);
+      var locz = Geolocation.latLng();
+     console.log ('this is loc: ' + locz );
 
       var dataz = {
         owner : Meteor.userId() ,
@@ -42,7 +42,7 @@ Template.productPage.events({
         image : imagez ,
         loc : locz
       };
-        console.log(dataz);
+
       ////todo append values to map
 
       $('#item').val('');
@@ -50,7 +50,7 @@ Template.productPage.events({
       $('#number').val('');
       Session.set('photo', null);
 
-      Stuff.insert (dataz);
+     Stuff.insert (dataz);
 
 
     }
