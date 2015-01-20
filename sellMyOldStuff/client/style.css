@@ -5,12 +5,27 @@
     float: left;
     height: 600px;
     margin: 0 1.5%;
-    width: 63%;
+    width: 60%;
+    padding: 10px;
 }
 
 .right{
-    float: right;
+
     margin: 0 1.5%;
     width: 30%;
+    padding: 10px;
+}
+ nav > h1{
+     text-align: center;
+
+ }
+aside{
+    float: right;
+    height: 450px;
+    width:  500px;
+    padding: 10px;
+
+}
+footer{
 
 }
