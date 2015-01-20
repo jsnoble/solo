@@ -23,33 +23,34 @@ Template.productPage.events({
       },
 
     'click #submit': function(event, template) {
-      event.preventDefault ();
-      console.log ('your info has been submitted');
 
-      var itemz = template.find ('input[name = item]');
-      var descriptionz = template.find ('input[name = description]');
-      var pricez = template.find ('input[name = price]');
-      var imagez = Session.get ('photo');
-      var locz = Geolocation.latLng ();
-      console.log ('this is loc: ' + locz , itemz , descriptionz , pricez);
+      event.preventDefault();
+      //console.log ('your info has been submitted');
+
+      var itemz = $('#item').val();
+      var descriptionz = $('#description').val();
+      var pricez = $('#number').val();
+      var imagez = Session.get('photo');
+      var locz = Geolocation.currentLocation();
+     // console.log ('this is loc: ' + locz , itemz , descriptionz , pricez);
 
       var dataz = {
-        owner : Meteor.userId () ,
-        username : Meteor.user ().username ,
+        owner : Meteor.userId() ,
         item : itemz ,
         description : descriptionz ,
         price : pricez ,
         image : imagez ,
         loc : locz
       };
+        console.log(dataz);
+      ////todo append values to map
 
-      //todo append values to map
+      $('#item').val('');
+      $('#description').val('');
+      $('#number').val('');
+      Session.set('photo', null);
 
-      itemz.value = '';
-      itemz.descriptionz = '';
-      itemz.pricez = '';
-
-      Stuff.insert (dataz);
+     // Stuff.insert (dataz);
 
 
     }
