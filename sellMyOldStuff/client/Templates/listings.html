@@ -1,0 +1,17 @@
+<template name="listings">
+
+    {{#each listings}}
+      {{> list}}
+    {{/each}}
+  </template>
+
+  <template name="list">
+    <div class="list">
+    <div>{{item}}</div>
+      <div>{{description}}</div>
+      <div>{{price}}</div>
+      <div><img src="{{image}}"/></div>
+      </div>
+  </template>
+
+

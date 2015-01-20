@@ -26,6 +26,17 @@ aside{
     padding: 10px;
 
 }
-footer{
+.listings{
+    float: left;
+    margin: 30px;
+}
 
+.container{
+
+}
+
+.list{
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 2px  solid black;
 }

@@ -50,7 +50,7 @@ Template.productPage.events({
       $('#number').val('');
       Session.set('photo', null);
 
-     // Stuff.insert (dataz);
+      Stuff.insert (dataz);
 
 
     }
