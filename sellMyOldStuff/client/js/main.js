@@ -2,7 +2,41 @@
 
 Meteor.startup(Geolocation.latLng());
 
+Meteor.startup(function(){
+  GoogleMaps.load({key:'AIzaSyDHhGk8-GXZX3jMPNEFhWqVAQarzAhBNwo'});
+});
 
+//Template.someMap.rendered = function(){
+//
+//  L.mapbox.accessToken = 'pk.eyJ1IjoianNub2JsZSIsImEiOiJTMXd0aHM0In0.Kl0VcXHGbfS-3ZdSpHKlZg';
+//  var map = L.mapbox.map("map", 'examples.map-zr0njcqy').setView([40, -74.50], 9);
+//
+//
+//
+//
+//};
+Template.body.helpers({
+  exampleMapOptions: function() {
+    // Make sure the maps API has loaded
+    if (GoogleMaps.loaded()) {
+      // We can use the `ready` callback to interact with the map API once the map is ready.
+      GoogleMaps.ready('exampleMap', function(map) {
+        // Add a marker to the map once it's ready
+        var marker = new google.maps.Marker({
+          position: map.options.center,
+          map: map.instance
+        });
+      });
+        var obj = Geolocation.latLng();
+      // Map initialization options
+      return {
+        center: new google.maps.LatLng(obj.lat,obj.lng),
+        zoom: 8
+      };
+    }
+  }
+});
+//'jsnoble.l065gigi'
   //// counter starts at 0
   //Session.setDefault("counter", 0);
   //
@@ -46,12 +80,9 @@ Meteor.startup(Geolocation.latLng());
 
 
 
-Template.someMap.rendered = function () {
 
-    L.mapbox.accessToken = 'pk.eyJ1IjoianNub2JsZSIsImEiOiJTMXd0aHM0In0.Kl0VcXHGbfS-3ZdSpHKlZg';
-    var map = L.mapbox.map("someMap", 'jsnoble.l065gigi');
 
-};
+
 
 //L.mapbox.accessToken = ;
 //var map = L.mapbox.map('map', 'jsnoble.l065gigi');
