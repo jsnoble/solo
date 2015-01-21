@@ -7,37 +7,35 @@
 <body>
 <header>
   <nav>
-  <h1>Welcome to sellMyOldStuff!</h1>
-  <div class="right">{{> loginButtons }}</div>
+  <h1 class="col=md-8 text-center">Welcome to sellMyOldStuff!</h1>
+  <div class="col-md-4">{{> loginButtons }}</div>
   </nav>
 
 
 
 </header>
-<div class="container">
-  <div >
-
-     <!--<iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/jsnoble.l065gigi/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoianNub2JsZSIsImEiOiJTMXd0aHM0In0.Kl0VcXHGbfS-3ZdSpHKlZg'></iframe>-->
-  </div>
+<div class="container-fluid">
 
   <div class="map-container">
-    {{> googleMap name="exampleMap" options=exampleMapOptions}}}
+    {{> googleMap name="Map" options=MapOptions}}
   </div>
 
 <div>
-<aside>
+<aside class="col-md-6">
 {{> productPage}}
 </aside>
 </div>
 
-</div>
-<div class="listings">
-<div>
-  <h1>Listings</h1>
-</div>
-{{> listings}}
 
+  <div class="listings ">
+    <div>
+      <h1>Listings</h1>
+    </div>
+    {{> listings}}
+
+  </div>
 </div>
+
 
 </body>
 

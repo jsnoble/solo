@@ -19,7 +19,8 @@ Schemas.stuff =  new SimpleSchema({
   price : {
     type : Number ,
     label : 'Price' ,
-    min : 0
+    min : 0,
+    decimal: true
 
   } ,
   image : {

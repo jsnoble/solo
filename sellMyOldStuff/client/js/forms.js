@@ -22,17 +22,16 @@ Template.productPage.events({
         })
       },
 
-    'click #submit': function(event, template) {
+    'click #submit': function(event) {
 
       event.preventDefault();
-      //console.log ('your info has been submitted');
 
       var itemz = $('#item').val();
       var descriptionz = $('#description').val();
       var pricez = $('#number').val();
       var imagez = Session.get('photo');
       var locz = Geolocation.latLng();
-     console.log ('this is loc: ' + locz );
+
 
       var dataz = {
         owner : Meteor.userId() ,
@@ -43,15 +42,32 @@ Template.productPage.events({
         loc : locz
       };
 
-      ////todo append values to map
+        var marker = new google.maps.Marker({
+          position: locz,
+          draggable:true,
+          map: GoogleMaps.maps.Map.instance,
+          title:"Buy Me! :"+ itemz +' : '+descriptionz+ 'Contact me '
+        });
 
-      $('#item').val('');
-      $('#description').val('');
-      $('#number').val('');
-      Session.set('photo', null);
+
+      var infowindow = new google.maps.InfoWindow({
+        content:''+
+          '<h2>'+ itemz+ '</h2>'+
+          '<img src='+'"' + imagez+ '"'+'/>' +
+          '<p>'+ descriptionz+ '</p>'
+
+      });
+
+      google.maps.event.addListener(marker, 'click', function(){
+        infowindow.open( GoogleMaps.maps.Map.instance, marker)
+      });
+
+     $('#item').val('');
+     $('#description').val('');
+     $('#number').val('');
+     Session.set('photo', null);
 
      Stuff.insert (dataz);
-
 
     }
 
