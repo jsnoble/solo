@@ -58,12 +58,11 @@ Template.productPage.events({
 
       });
 
-      google.maps.event.addListener(marker, 'click', function(){
-        infowindow.open( GoogleMaps.maps.Map.instance, marker)
-      });
+      //google.maps.event.addListener(marker, 'click', function(){
+      //  infowindow.open( GoogleMaps.maps.Map.instance, marker)
+      //});
 
      $('#item').val('');
-     $('#description').val('');
      $('#number').val('');
      Session.set('photo', null);
 

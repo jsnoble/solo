@@ -23,6 +23,12 @@ Schemas.stuff =  new SimpleSchema({
     decimal: true
 
   } ,
+  loc : {
+    type : Object ,
+    label : 'Loc' ,
+    blackbox: true
+
+  } ,
   image : {
     type : String ,
     label : 'Image' ,
